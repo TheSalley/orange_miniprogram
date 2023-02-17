@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container.data-v-eb1fb978 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  width: 100%;
+  border: 5rpx solid #fadc19;
+  border-radius: 40rpx;
+}
+.container .icon.data-v-eb1fb978 {
+  width: 70rpx;
+}
+.container .icon image.data-v-eb1fb978 {
+  width: 100%;
+}
+.container .recommend_content.data-v-eb1fb978 {
+  flex-grow: 1;
+  border-left: 1rpx solid gainsboro;
+  padding-left: 30rpx;
+  margin-left: 30rpx;
+  color: gainsboro;
+}
+.container .search_button.data-v-eb1fb978 {
+  height: 100%;
+  background-color: #fadc19;
+  padding: 0rpx 50rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+

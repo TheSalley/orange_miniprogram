@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Orange",
+    "navigationBarBackgroundColor": "#fadc19",
+    "backgroundColor": "#fadc19"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#f4ea2a",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/tabbar/index.png",
+        "selectedIconPath": "static/images/tabbar/index_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "static/images/tabbar/message.png",
+        "selectedIconPath": "static/images/tabbar/message_active.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/images/tabbar/my.png",
+        "selectedIconPath": "static/images/tabbar/my_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
