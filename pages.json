@@ -1,0 +1,65 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/watch/watch"
+		},
+		{
+			"path": "pages/wallpaper/wallpaper"
+		},
+		{
+			"path": "pages/video/video"
+		},
+		{
+			"path": "pages/my/my"
+		},
+		{
+			"path": "pages/search/search"
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Orange",
+		"navigationBarBackgroundColor": "#fadc19"
+	},
+	"tabBar": {
+		"color": "#707070",
+		"selectedColor": "#fb5980",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/watch/watch",
+				"iconPath": "static/images/tabbar/like.png",
+				"selectedIconPath": "static/images/tabbar/like1.png",
+				"text": "追剧"
+			},
+			{
+				"pagePath": "pages/wallpaper/wallpaper",
+				"iconPath": "static/images/tabbar/wallpaper.png",
+				"selectedIconPath": "static/images/tabbar/wallpaper1.png",
+				"text": "壁纸"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/tabbar/home.png",
+				"selectedIconPath": "static/images/tabbar/home1.png",
+				"text": "广场"
+			},
+			{
+				"pagePath": "pages/video/video",
+				"iconPath": "static/images/tabbar/flag.png",
+				"selectedIconPath": "static/images/tabbar/flag1.png",
+				"text": "推荐"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/images/tabbar/my.png",
+				"selectedIconPath": "static/images/tabbar/my1.png",
+				"text": "我的"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}
