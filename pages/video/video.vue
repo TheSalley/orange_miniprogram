@@ -3,7 +3,36 @@
 		<swiper :current="current" vertical @change="handle_swiper">
 			<swiper-item v-for="(item, index) in lists" :key="item.photo.id">
 				<view class="videoBox" @click="handle_show_controls">
-					<!-- <text>选集</text> -->
+					<!-- 点赞、分享... -->
+					<view class="ul_box">
+						<ul class="operate_list">
+							<li>
+								<i :class="['iconfont icon-aixin_shixin', item.give_a_like ? 'give_a_like_active' : '']  "
+									@click="handle_give_a_like"></i>
+								<span>{{ item.photo.liked }}</span>
+							</li>
+							<li>
+								<i class="iconfont icon-shoucang"></i>
+								<span>追剧</span>
+							</li>
+							<li>
+								<!-- #ifdef MP-WEIXIN -->
+								<image src="../../static/images/wechat.png" mode="widthFix" style="width: 80rpx;">
+								</image>
+								<!-- #endif -->
+								<!-- #ifdef MP-TOUTIAO -->
+								<image src="../../static/images/tiktok.png" mode="widthFix" style="width: 80rpx;">
+								</image>
+								<!-- #endif -->
+								<span>{{ item.photo.viewCount }}</span>
+							</li>
+							<li>
+								<img src="../../static/images/gift.png" alt="" class="welfare">
+								<span>福利</span>
+							</li>
+						</ul>
+					</view>
+					<!-- 播放、暂停 -->
 					<view class="is_playing_box" v-if="is_show_controls" @click.stop="handle_video_play">
 						<image :src="play_or_pause"></image>
 					</view>
@@ -33,7 +62,7 @@
 			// 处理swiper 滑动
 			async handle_swiper(e) {
 				this.current = e.mp.detail.current;
-				console.log(e.mp.detail.current);
+				// console.log(e.mp.detail.current);
 				if (this.current == 19) {
 					const {
 						data: res
@@ -48,6 +77,8 @@
 
 					index === this.current ? videoContext.play() : videoContext.pause()
 				})
+				this.is_playing = true;
+				this.is_show_controls = false;
 
 			},
 			// 处理是否展示底部控制栏
@@ -70,16 +101,20 @@
 			}
 		},
 		async onReady() {
+			// 请求数据
 			const {
 				data: res
 			} = await requestVideo();
 			this.lists = res.data;
-
-
 		},
 		onShow() {
 			uni.setTabBarStyle({
 				backgroundColor: '#000000',
+			})
+		},
+		onHide() {
+			uni.setTabBarStyle({
+				backgroundColor: '#ffffff',
 			})
 		},
 		computed: {

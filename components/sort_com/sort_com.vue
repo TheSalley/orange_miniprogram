@@ -13,7 +13,7 @@
 
 <script>
 	export default {
-		name: "sort",
+		name: "sort_com",
 		data() {
 			return {
 				list: [{

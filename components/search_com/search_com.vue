@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name: "search",
+		name: "search_com",
 		data() {
 			return {};
 		},
